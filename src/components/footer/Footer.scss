@@ -1,0 +1,41 @@
+.footer {
+  background: rgb(19, 19, 19);
+  padding: 5rem 0 2.5rem 0;
+  color: #ecf0f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  &__grid {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+  &__col {
+    flex: 1 1 33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  &__item {
+    margin: 0 1rem;
+  }
+
+  &__sign {
+    font-weight: 100;
+  }
+}
