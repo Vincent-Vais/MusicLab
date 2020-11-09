@@ -1,14 +1,21 @@
-.item {
-  flex: 1 1 50%;
+@import "../../scss/layout";
+@import "../../scss/animation";
+@import "../../scss/components";
+@import "../../scss/vars";
+
+.service {
   overflow: hidden;
   position: relative;
+
+  @include colOneTwo;
 
   &__img {
     width: 100%;
     display: block;
     transform: scale(1.05);
     filter: brightness(0.5);
-    transition: all 0.25s ease-in;
+
+    @include transReg;
   }
   &:hover &__img {
     transform: scale(1);
@@ -17,11 +24,11 @@
 
   &__text {
     position: absolute;
-    top: 20%;
-    left: 10%;
+    top: 1vh;
+    left: 2.5vw;
     z-index: 1;
     font-size: 2.5rem;
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba($bcg_white, 0.9);
   }
 
   &__header {
@@ -33,19 +40,10 @@
 
   &__button {
     margin-top: 1.5rem;
-    padding: 1.25rem 2.75rem;
-    background-color: #ecf0f1;
-    font-weight: 700;
-    font-size: 2rem;
-    color: rgba(0, 0, 0, 0.8);
     display: none;
     opacity: 0;
-    transition: all 0.2s ease-in;
 
-    &:hover {
-      background-color: #131313;
-      color: #ecf0f1;
-    }
+    @include btnRegWhite;
   }
   &:hover &__button {
     opacity: 1;
@@ -61,26 +59,4 @@
 .animate3,
 .animate4 {
   animation: slideLeft 2s cubic-bezier(0.69, 0.69, 0.62, 1.64);
-}
-
-@keyframes slideRight {
-  0% {
-    transform: translateX(-25rem);
-    opacity: 0.75;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes slideLeft {
-  0% {
-    transform: translateX(25rem);
-    opacity: 0.75;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
 }

@@ -12,13 +12,13 @@ const Service = ({ item, idx, animate }) => {
   }, [idx]);
 
   return (
-    <div className={`item ${animate ? `animate${idx + 1}` : ""}`}>
-      <div className="item__text">
-        <h3 className="item__header">{item.header}</h3>
-        <p className="item__body">{item.text}</p>
-        <button className="item__button">Узнать больше</button>
+    <div className={`service ${animate ? `animate${idx + 1}` : ""}`}>
+      <div className="service__text">
+        <h3 className="service__header">{item.header}</h3>
+        <p className="service__body">{item.text}</p>
+        <button className="service__button">Узнать больше</button>
       </div>
-      <img src={image} alt={`service ${idx}`} className="item__img" />
+      <img src={image} alt={`service ${idx}`} className="service__img" />
     </div>
   );
 };

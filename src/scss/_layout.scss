@@ -20,6 +20,10 @@
   flex: 1 1 100%;
 }
 
+@mixin colOneTwo {
+  flex: 1 1 50%;
+}
+
 @mixin colOneThree {
   flex: 1 1 33%;
 }
