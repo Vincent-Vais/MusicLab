@@ -1,0 +1,30 @@
+// Flex
+@mixin flex {
+  display: flex;
+}
+
+@mixin flexWrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@mixin flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+// Flex Position
+@mixin flexCenterCenter {
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flexBetweenCenter {
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flexColumnCenterNone {
+  justify-content: center;
+  flex-direction: column;
+}

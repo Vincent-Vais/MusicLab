@@ -16,12 +16,18 @@
     align-items: center;
   }
 
+  &__logo {
+    position: absolute;
+    width: 3rem;
+  }
+
   &__item {
     font-size: 2rem;
     padding: 1.25rem 2rem;
     border-bottom: 2.5px solid transparent;
     margin: 1rem 0;
     cursor: pointer;
+    color: rgba(0, 0, 0, 0.7);
 
     &:hover {
       border-color: #e74c3c;
@@ -40,6 +46,10 @@
       border-bottom: none;
       border: 1px solid transparent;
     }
+  }
+
+  &__selected {
+    color: rgba(0, 0, 0, 1);
   }
 }
 

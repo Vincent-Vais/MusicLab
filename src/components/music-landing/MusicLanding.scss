@@ -1,0 +1,123 @@
+.musicLanding {
+  background: #fff;
+  transform: skewY(4deg);
+  display: flex;
+  justify-content: center;
+  padding: 10rem 0 25rem 0;
+
+  &__row {
+    transform: skewY(-4deg);
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__col {
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &__cover {
+    height: 65rem;
+    width: 75%;
+    padding: 2.5rem 0 5rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.4);
+    background: radial-gradient(#dfe4ea, #fff);
+  }
+
+  &__imgContainer {
+    height: 60%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__img {
+    height: 100%;
+    width: 70%;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.45);
+  }
+
+  &__controls {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__progress {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    &--line {
+      border: 0;
+      height: 2.5px;
+      width: 95%;
+      background-image: linear-gradient(to left, #747474, #000, #747474);
+      border-radius: 15px;
+    }
+
+    &--circle {
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 50%;
+      background-color: #000;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+  &__text {
+    font-size: 2.5rem;
+    text-align: justify;
+    font-weight: 300;
+  }
+
+  &__header {
+    font-size: 5rem;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    background: linear-gradient(to right, #333, rgba(0, 0, 0, 0.8));
+    display: inline-block;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: all 0.2s;
+    letter-spacing: 0.2rem;
+    margin-right: auto;
+    &:hover {
+      transform: skewY(2deg) skewX(15deg) scale(1.1);
+      text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
+    }
+  }
+  &__button {
+    margin-top: 5rem;
+    padding: 1.25rem 2.75rem;
+    font-weight: 700;
+    font-size: 2rem;
+    border: 1px solid #131313;
+    background-color: #131313;
+    color: #ecf0f1;
+    transition: all 0.2s ease-in;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.75);
+      color: rgba(0, 0, 0, 0.8);
+    }
+  }
+}

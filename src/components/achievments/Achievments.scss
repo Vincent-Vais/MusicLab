@@ -1,0 +1,71 @@
+.achievments {
+  padding: 10rem 0 10rem 0;
+  background-color: rgb(255, 255, 255);
+  transform: skewY(4deg);
+  &__row {
+    display: flex;
+    transform: skewY(-4deg);
+  }
+  &__col {
+    position: relative;
+    flex: 1 1 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 1);
+    color: #dcdde1;
+    padding: 5rem;
+  }
+
+  &__col:hover &__modal {
+    animation: refSlideIn 1s ease-in forwards;
+  }
+
+  &__col:hover &__text {
+    opacity: 1;
+    transition: 0.5s 0.9s linear;
+  }
+
+  &__modal {
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 100;
+    background-color: #dcdde1;
+    height: 100%;
+    animation: refSlideOut 1s ease-in forwards;
+    color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__text {
+    font-size: 3rem;
+    opacity: 0;
+  }
+
+  &__icon {
+    font-size: 15rem;
+  }
+}
+
+@keyframes refSlideIn {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes refSlideOut {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}

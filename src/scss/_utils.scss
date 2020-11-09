@@ -1,0 +1,21 @@
+// Padding
+@mixin padVertSm {
+  padding: 7.5rem 0;
+}
+
+@mixin padVertBgMd {
+  padding: 12rem 0 10rem 0;
+}
+
+@mixin padVertHg {
+  padding: 15rem 0;
+}
+
+// Margin
+@mixin marBotMd {
+  margin-bottom: 5rem;
+}
+
+@mixin marBotLg {
+  margin-bottom: 7.5rem;
+}

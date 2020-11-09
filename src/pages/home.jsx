@@ -1,19 +1,19 @@
 import React from "react";
 
-import Hero from "../components/hero/Hero";
-import InfoShort from "../components/info-short/InfoShort";
-import Services from "../components/services/Services";
-import InfoCollage from "../components/info-collage/InfoCollage";
-import Footer from "../components/footer/Footer";
+import Hero from "../components/hero";
+import InfoCollage from "../components/info-collage";
+import InfoShort from "../components/info-short";
+import MusicLanding from "../components/music-landing";
+import Services from "../components/services";
 
-const HomePage = ({ currentHeight }) => {
+const HomePage = () => {
   return (
     <div>
       <Hero />
-      <InfoShort />
       <InfoCollage />
-      <Services currentHeight={currentHeight} />
-      <Footer />
+      <InfoShort />
+      <MusicLanding />
+      <Services />
     </div>
   );
 };

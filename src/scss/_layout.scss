@@ -1,0 +1,25 @@
+// Rows
+@mixin row100 {
+  width: 100%;
+}
+
+@mixin row90 {
+  width: 90%;
+}
+
+@mixin row80 {
+  width: 70%;
+}
+
+@mixin row70 {
+  width: 70%;
+}
+
+// Collumns
+@mixin colOneOne {
+  flex: 1 1 100%;
+}
+
+@mixin colOneThree {
+  flex: 1 1 33%;
+}

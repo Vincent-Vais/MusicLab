@@ -1,10 +1,12 @@
+@import "../../scss/vars";
+@import "../../scss/flex";
+
 .services {
-  background-color: #333;
+  background-color: $bcg_dark;
   width: 100vw;
   margin-top: -10rem;
 }
 
 .grid {
-  display: flex;
-  flex-wrap: wrap;
+  @include flexWrap;
 }

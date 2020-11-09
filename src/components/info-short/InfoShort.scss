@@ -2,38 +2,68 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem 0 20rem 0;
+  padding: 5rem 0 7.5rem 0;
 
-  &__row {
-    width: 80%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  &:hover &__col-3-4 {
+    transform: translateY(-10rem) scale(0.2);
+    opacity: 0.25;
   }
 
-  &__col {
-    flex: 1 1 50%;
+  &:hover &__button {
+    opacity: 1;
+  }
+
+  &__row {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__col-1-4 {
+    flex: 1 1 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__col-3-4 {
+    flex: 1 1 75%;
+    transform-origin: left;
+    transition: all 0.5s ease-in;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
   }
 
   &__img {
-    clip-path: circle(50%);
-    background: url("../../assets/avatar.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 35rem;
-    height: 35rem;
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    object-fit: cover;
   }
 
   &__text {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    margin-bottom: 1rem;
     text-align: justify;
-    font-weight: 300;
+    position: relative;
   }
+  &__button {
+    position: absolute;
+    transform: translate(2.5rem, 4.5rem);
+    margin-top: 1.5rem;
+    padding: 1.25rem 2.75rem;
+    background-color: rgba(255, 255, 255, 0.75);
+    font-weight: 700;
+    font-size: 2rem;
+    opacity: 0;
+    color: rgba(0, 0, 0, 0.8);
+    transition: all 0.2s ease-in;
 
-  &__header {
-    text-align: center;
-    margin-bottom: 2rem;
-    font-size: 3rem;
+    &:hover {
+      background-color: #131313;
+      color: #ecf0f1;
+    }
   }
 }
