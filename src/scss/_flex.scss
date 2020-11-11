@@ -28,3 +28,18 @@
   justify-content: center;
   flex-direction: column;
 }
+
+@mixin flexEndStart {
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+@mixin flexEndCenter {
+  justify-content: flex-end;
+  align-items: center;
+}
+
+@mixin flexStartStart {
+  justify-content: flex-start;
+  align-items: flex-start;
+}

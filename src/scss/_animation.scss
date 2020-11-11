@@ -71,7 +71,6 @@
     opacity: 1;
   }
 }
-
 @keyframes slideLeft {
   0% {
     transform: translateX(25rem);
@@ -80,5 +79,24 @@
   100% {
     transform: translateX(0);
     opacity: 1;
+  }
+}
+
+// Navigation
+@keyframes navShow {
+  0% {
+    transform: translateY(-25rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes navHide {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-25rem);
   }
 }

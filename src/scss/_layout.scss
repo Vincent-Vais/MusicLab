@@ -3,12 +3,16 @@
   width: 100%;
 }
 
+@mixin row95 {
+  width: 95%;
+}
+
 @mixin row90 {
   width: 90%;
 }
 
 @mixin row80 {
-  width: 70%;
+  width: 80%;
 }
 
 @mixin row70 {
@@ -26,4 +30,11 @@
 
 @mixin colOneThree {
   flex: 1 1 33%;
+}
+
+@mixin colOneFour {
+  flex: 1 1 25%;
+}
+@mixin colThreeFour {
+  flex: 1 1 75%;
 }

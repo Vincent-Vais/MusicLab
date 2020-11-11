@@ -1,19 +1,23 @@
+@import "../../scss/vars";
+@import "../../scss/flex";
+@import "../../scss/layout";
+@import "../../scss/animation";
+
 .nav {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba($bcg_white, 0.5);
   z-index: 1;
 
+  @include flex;
+  @include flexCenterCenter;
+
   &__list {
-    width: 95%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    @include row95;
+    @include flex;
+    @include flexEndCenter;
   }
 
   &__logo {
@@ -35,16 +39,16 @@
 
     &--left {
       margin-right: auto;
-      background-color: rgba(255, 255, 255, 0.4);
+      background-color: rgba($bcg_white, 0.4);
       border-radius: 1000px;
       width: 50px;
       height: 50px;
       text-align: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       border-bottom: none;
       border: 1px solid transparent;
+
+      @include flex;
+      @include flexCenterCenter;
     }
   }
 
@@ -61,22 +65,4 @@
 .hideNav {
   transform: translateY(-25rem);
   animation: navHide 2s;
-}
-
-@keyframes navShow {
-  0% {
-    transform: translateY(-25rem);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
-@keyframes navHide {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-25rem);
-  }
 }

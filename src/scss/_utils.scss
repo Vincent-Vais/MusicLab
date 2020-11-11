@@ -1,6 +1,18 @@
 // Padding
+@mixin padVertTn {
+  padding: 5rem 0;
+}
 @mixin padVertSm {
   padding: 7.5rem 0;
+}
+@mixin padVertMd {
+  padding: 10rem 0;
+}
+@mixin padVertBg {
+  padding: 12rem 0;
+}
+@mixin padVertHg {
+  padding: 15rem 0;
 }
 
 @mixin padVertBgMd {
