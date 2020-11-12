@@ -24,6 +24,11 @@
   justify-content: space-between;
 }
 
+@mixin flexAroundCenter {
+  justify-content: space-around;
+  align-items: center;
+}
+
 @mixin flexColumnCenterNone {
   justify-content: center;
   flex-direction: column;
@@ -42,4 +47,17 @@
 @mixin flexStartStart {
   justify-content: flex-start;
   align-items: flex-start;
+}
+
+@mixin flexStartCenter {
+  justify-content: flex-start;
+  align-items: center;
+}
+
+@mixin flexAroundNone {
+  justify-content: space-around;
+}
+
+@mixin flexCenterNone {
+  justify-content: center;
 }

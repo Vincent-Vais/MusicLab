@@ -32,7 +32,6 @@
   font-size: 2rem;
   color: $text_black;
   box-shadow: $box_shadow_small;
-  border: 1px solid transparent;
   overflow: hidden;
 
   @include transReg;
@@ -40,12 +39,9 @@
   &:hover {
     background-color: $bcg_black;
     color: $bcg_gray;
-    box-shadow: $box_shadow_big;
+    box-shadow: $box_shadow_md;
   }
 
-  &:focus {
-    border-color: $bcg_gray;
-  }
   &:active {
     box-shadow: none;
     &::before {
@@ -55,14 +51,114 @@
       left: 50%;
       transform: translate(-50%, -50%) scale(0);
       border-radius: 50%;
-      width: 20rem;
-      height: 20rem;
-      background: radial-gradient(
-        circle at 50%,
-        $bcg_dark,
-        rgba($bcg_gray, 0.5),
-        $bcg_dark
-      );
+      width: 25rem;
+      height: 25rem;
+      background-color: rgba($bcg_white, 0.75);
+      animation: scaleBtnOverlay 0.5s 0.025s ease-in-out;
+    }
+  }
+}
+
+@mixin btnRegBlack {
+  position: relative;
+  padding: 1.25rem 2.75rem;
+  background-color: $bcg_black;
+  font-weight: 700;
+  font-size: 2rem;
+  color: $bcg_gray;
+  box-shadow: $box_shadow_small;
+  overflow: hidden;
+
+  @include transReg;
+
+  &:hover {
+    background-color: $bcg_gray;
+    color: $text_black;
+    box-shadow: $box_shadow_md;
+  }
+
+  &:active {
+    box-shadow: none;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      border-radius: 50%;
+      width: 25rem;
+      height: 25rem;
+      background-color: rgba($bcg_black, 0.3);
+      animation: scaleBtnOverlay 0.5s 0.025s ease-in-out;
+    }
+  }
+}
+
+@mixin btnBigWhite {
+  position: relative;
+  padding: 2.25rem 4.5rem;
+  background-color: $bcg_gray;
+  font-weight: 700;
+  font-size: 3rem;
+  color: $text_black;
+  box-shadow: $box_shadow_small;
+  overflow: hidden;
+
+  @include transReg;
+
+  &:hover {
+    background-color: $bcg_black;
+    color: $bcg_gray;
+    box-shadow: $box_shadow_md;
+  }
+
+  &:active {
+    box-shadow: none;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      border-radius: 50%;
+      width: 35rem;
+      height: 35rem;
+      background-color: rgba($bcg_white, 0.75);
+      animation: scaleBtnOverlay 0.5s 0.025s ease-in-out;
+    }
+  }
+}
+
+@mixin btnBigBlack {
+  position: relative;
+  padding: 2.25rem 4.5rem;
+  background-color: $bcg_black;
+  font-weight: 700;
+  font-size: 3rem;
+  color: $bcg_gray;
+  box-shadow: $box_shadow_small;
+  overflow: hidden;
+
+  @include transReg;
+
+  &:hover {
+    background-color: $bcg_gray;
+    color: $text_black;
+    box-shadow: $box_shadow_md;
+  }
+
+  &:active {
+    box-shadow: none;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      border-radius: 50%;
+      width: 35rem;
+      height: 35rem;
+      background-color: rgba($bcg_black, 0.3);
       animation: scaleBtnOverlay 0.5s 0.025s ease-in-out;
     }
   }

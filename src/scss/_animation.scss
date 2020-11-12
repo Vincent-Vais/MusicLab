@@ -100,3 +100,22 @@
     transform: translateY(-25rem);
   }
 }
+
+// Achievments
+@keyframes refSlideIn {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes refSlideOut {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}

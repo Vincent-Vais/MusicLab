@@ -1,25 +1,27 @@
+@import "../../scss/vars";
+@import "../../scss/flex";
+@import "../../scss/layout";
+
 .footer {
   background: rgb(19, 19, 19);
   padding: 5rem 0 2.5rem 0;
-  color: #ecf0f1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  color: $bcg_gray;
   font-size: 2rem;
 
+  @include flex;
+  @include flexCenterCenter;
+
   &__grid {
-    width: 90%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
+    @include row90;
+    @include flexColumn;
+    @include flexBetweenCenter;
   }
   &__col {
-    flex: 1 1 33%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     text-align: justify;
+
+    @include colOneThree;
+    @include flex;
+    @include flexCenterCenter;
 
     &:not(:last-child) {
       margin-bottom: 2rem;
@@ -27,9 +29,8 @@
   }
 
   &__list {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    @include flex;
+    @include flexAroundCenter;
   }
 
   &__item {

@@ -23,6 +23,14 @@
   padding: 15rem 0;
 }
 
+@mixin padVertMdGg {
+  padding: 10rem 0 25rem 0;
+}
+
+@mixin padVertTnSm {
+  padding: 5rem 0 7.5rem 0;
+}
+
 // Margin
 @mixin marBotMd {
   margin-bottom: 5rem;

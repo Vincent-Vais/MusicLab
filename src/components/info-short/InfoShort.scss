@@ -1,8 +1,13 @@
+@import "../../scss/flex";
+@import "../../scss/utils";
+@import "../../scss/layout";
+@import "../../scss/animation";
+@import "../../scss/components";
+
 .info {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 5rem 0 7.5rem 0;
+  @include flex;
+  @include flexCenterCenter;
+  @include padVertTnSm;
 
   &:hover &__col-3-4 {
     transform: translateY(-10rem) scale(0.2);
@@ -14,26 +19,25 @@
   }
 
   &__row {
-    width: 70%;
-    display: flex;
-    justify-content: center;
+    @include row70;
+    @include flex;
+    @include flexCenterNone;
   }
 
   &__col-1-4 {
-    flex: 1 1 25%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include colOneFour;
+    @include flex;
+    @include flexCenterCenter;
   }
+
   &__col-3-4 {
-    flex: 1 1 75%;
     transform-origin: left;
-    transition: all 0.5s ease-in;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     position: relative;
+
+    @include colThreeFour;
+    @include flexColumn;
+    @include flexCenterCenter;
+    @include transSlow;
   }
 
   &__img {
@@ -53,17 +57,8 @@
     position: absolute;
     transform: translate(2.5rem, 4.5rem);
     margin-top: 1.5rem;
-    padding: 1.25rem 2.75rem;
-    background-color: rgba(255, 255, 255, 0.75);
-    font-weight: 700;
-    font-size: 2rem;
     opacity: 0;
-    color: rgba(0, 0, 0, 0.8);
-    transition: all 0.2s ease-in;
 
-    &:hover {
-      background-color: #131313;
-      color: #ecf0f1;
-    }
+    @include btnRegWhite;
   }
 }

@@ -1,24 +1,26 @@
+@import "../../scss/components";
+@import "../../scss/utils";
+@import "../../scss/flex";
+@import "../../scss/layout";
+@import "../../scss/typo";
+
 .about {
-  background-color: #fff;
   margin-top: 15rem;
-  padding: 10rem 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transform: skewY(4deg);
+
+  @include containerWhiteSkewed;
+  @include padVertMd;
+  @include flex;
+  @include flexCenterCenter;
 
   &__row {
-    width: 70%;
-    display: flex;
-    transform: skewY(-4deg);
+    @include row70;
+    @include flex;
   }
 
   &__col {
-    display: flex;
-    flex: 1 1 50%;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    @include colOneTwo;
+    @include flexColumn;
+    @include flexCenterCenter;
   }
 
   &__img {
@@ -27,22 +29,7 @@
   }
 
   &__header {
-    font-size: 5rem;
-    margin-bottom: 3rem;
-    text-transform: uppercase;
-    font-weight: 700;
-    background: linear-gradient(to right, #333, rgba(0, 0, 0, 0.8));
-    display: inline-block;
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    transition: all 0.2s;
-    letter-spacing: 0.2rem;
-    margin-right: auto;
-    &:hover {
-      transform: skewY(2deg) skewX(15deg) scale(1.1);
-      text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
-    }
+    @include heading;
   }
 
   &__text {

@@ -1,22 +1,27 @@
+@import "../../scss/components";
+@import "../../scss/utils";
+@import "../../scss/flex";
+@import "../../scss/layout";
+@import "../../scss/vars";
+@import "../../scss/animation";
+
 .achievments {
-  padding: 10rem 0 10rem 0;
-  background-color: rgb(255, 255, 255);
-  transform: skewY(4deg);
+  @include containerWhiteSkewed;
+  @include padVertMd;
+
   &__row {
-    display: flex;
-    transform: skewY(-4deg);
+    @include flex;
   }
   &__col {
     position: relative;
-    flex: 1 1 25%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     text-align: center;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: $bcg_white;
     color: #dcdde1;
     padding: 5rem;
+
+    @include colOneFour;
+    @include flexColumn;
+    @include flexCenterCenter;
   }
 
   &__col:hover &__modal {
@@ -37,9 +42,9 @@
     height: 100%;
     animation: refSlideOut 1s ease-in forwards;
     color: rgba(0, 0, 0, 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+    @include flex;
+    @include flexCenterCenter;
   }
 
   &__text {
@@ -49,23 +54,5 @@
 
   &__icon {
     font-size: 15rem;
-  }
-}
-
-@keyframes refSlideIn {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 100%;
-  }
-}
-
-@keyframes refSlideOut {
-  0% {
-    width: 100%;
-  }
-  100% {
-    width: 0%;
   }
 }
