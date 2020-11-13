@@ -1,0 +1,75 @@
+@import "../../scss/layout";
+@import "../../scss/vars";
+@import "../../scss/flex";
+
+.music-cover {
+  height: 100%;
+  padding: 2.5rem 0 5rem 0;
+  border-radius: 5px;
+  background: radial-gradient(#dfe4ea, #fff);
+  box-shadow: $box_shadow_small;
+
+  @include row100;
+  @include flexColumn;
+  @include flexBetweenCenter;
+
+  &.center {
+    box-shadow: $box_shadow_big;
+  }
+
+  &.left {
+    box-shadow: $box_shadow_md;
+  }
+
+  &__imgContainer {
+    height: 60%;
+
+    @include row100;
+    @include flex;
+    @include flexCenterNone;
+  }
+
+  &__img {
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: $box_shadow_md;
+
+    @include row70;
+  }
+
+  &__controls {
+    height: 40%;
+
+    @include row100;
+    @include flexColumn;
+    @include flexCenterCenter;
+  }
+
+  &__progress {
+    position: relative;
+
+    @include row90;
+    @include flex;
+    @include flexCenterNone;
+
+    &--line {
+      border: 0;
+      height: 2.5px;
+      background-image: linear-gradient(to left, #747474, #000, #747474);
+      border-radius: 15px;
+
+      @include row95;
+    }
+
+    &--circle {
+      position: absolute;
+      top: 0;
+      left: -1.5rem;
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 50%;
+      background-color: #000;
+    }
+  }
+}

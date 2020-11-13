@@ -31,6 +31,10 @@
   padding: 5rem 0 7.5rem 0;
 }
 
+@mixin padVertBgNone {
+  padding-top: 12rem;
+}
+
 // Margin
 @mixin marBotMd {
   margin-bottom: 5rem;

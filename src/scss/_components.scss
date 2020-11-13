@@ -163,3 +163,38 @@
     }
   }
 }
+
+@mixin btnBigRed {
+  position: relative;
+  padding: 2.25rem 4.5rem;
+  background-color: $primary;
+  font-weight: 700;
+  font-size: 3rem;
+  color: $bcg_gray;
+  box-shadow: $box_shadow_small;
+  overflow: hidden;
+
+  @include transReg;
+
+  &:hover {
+    background-color: $bcg_gray;
+    color: $text_black;
+    box-shadow: $box_shadow_md;
+  }
+
+  &:active {
+    box-shadow: none;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      border-radius: 50%;
+      width: 35rem;
+      height: 35rem;
+      background-color: rgba($bcg_black, 0.3);
+      animation: scaleBtnOverlay 0.5s 0.025s ease-in-out;
+    }
+  }
+}

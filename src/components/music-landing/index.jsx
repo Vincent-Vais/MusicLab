@@ -1,6 +1,8 @@
 import React from "react";
 import withHeight from "../../withHeight";
 
+import MusicCover from "../music-cover";
+
 import img from "../../assets/song1.jpeg";
 import "./MusicLanding.scss";
 
@@ -10,21 +12,7 @@ const MusicLanding = () => {
       <div className="musicLanding__row">
         <div className="musicLanding__col">
           <div className="musicLanding__cover">
-            <div className="musicLanding__imgContainer">
-              <img src={img} alt="Song" className="musicLanding__img" />
-            </div>
-            <div className="musicLanding__controls">
-              <div className="musicLanding__progress">
-                <hr className="musicLanding__progress--line" />
-                <span
-                  className="musicLanding__progress--circle"
-                  style={{ transform: "translate(1.25rem, -50%)" }}
-                ></span>
-              </div>
-            </div>
-            <span className="musicLanding__icon--play">
-              <i className="fas fa-play fa-6x"></i>
-            </span>
+            <MusicCover img={img} />
           </div>
         </div>
         <div className="musicLanding__col">

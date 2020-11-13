@@ -7,6 +7,7 @@ import { selectAll } from "./store/selectors/refs";
 import Nav from "./components/nav";
 import HomePage from "./pages/home";
 import Portfolio from "./pages/portfolio";
+import Music from "./pages/music";
 import Footer from "./components/footer";
 import RightMenu from "./components/right-menu";
 
@@ -44,9 +45,14 @@ function App() {
         <Route path="/portfolio">
           <Portfolio />
         </Route>
+        <Route path="/music">
+          <Music />
+        </Route>
       </Switch>
       <Footer />
-      <RightMenu />
+      <Route path="/">
+        <RightMenu />
+      </Route>
     </div>
   );
 }

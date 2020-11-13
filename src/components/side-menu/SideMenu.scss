@@ -1,0 +1,35 @@
+@import "../../scss/layout";
+@import "../../scss/utils";
+@import "../../scss/flex";
+
+.side-menu {
+  height: 100vh;
+
+  flex: 1 1 15%;
+  // @include colOneFour;
+  @include padVertBgNone;
+  @include flexColumn;
+  @include flexStartCenter;
+
+  &__list {
+    width: 100%;
+    padding: 1.25rem;
+  }
+
+  &__item {
+    font-size: 1.6rem;
+    padding: 1rem 0.5rem 1rem 2rem;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 3px;
+
+    &.active {
+      background-color: #dfe4ea;
+    }
+
+    &:hover {
+      color: rgba(0, 0, 0, 1);
+    }
+  }
+}

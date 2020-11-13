@@ -1,11 +1,13 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector, shallowEqual } from "react-redux";
+import { useLocation } from "react-router-dom";
 import { selectMin } from "../../store/selectors/distance";
 import { selectAll } from "../../store/selectors/refs";
 import { getMin } from "../../store/actions/distance";
 import "./RightMenu.scss";
 
 const RightMenu = () => {
+  const location = useLocation();
   const dispatch = useDispatch();
   const refs = useSelector(selectAll, shallowEqual);
   const minRef = useSelector(selectMin, shallowEqual);
@@ -26,7 +28,7 @@ const RightMenu = () => {
     }
   }, [minRef, refs, dispatch]);
 
-  return (
+  return location.pathname !== "/music" ? (
     <ul className="rightMenu">
       {refs.map((item, idx) => (
         <li
@@ -41,7 +43,7 @@ const RightMenu = () => {
         </li>
       ))}
     </ul>
-  );
+  ) : null;
 };
 
 export default RightMenu;
