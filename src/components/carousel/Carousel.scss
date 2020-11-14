@@ -43,19 +43,58 @@
     &.center {
       top: 50%;
       left: 50%;
+      animation: fromLeftToCenter 1s ease-in;
+
+      &.reverse {
+        animation: fromRightToCenter 1s ease-in forwards;
+      }
     }
     &.left {
-      transform: translate(-50%, -50%) scale(0.7);
-      top: 40%;
-      left: 22.5%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-35vw, -40vh) scale(0.7);
       opacity: 0.7;
+      animation: fromRightToLeft 1s ease-in;
+
+      &.reverse {
+        animation: fromCenterToLeft 1s ease-in forwards;
+      }
     }
 
     &.right {
-      transform: translate(-50%, -50%) scale(0.6);
-      top: 30%;
-      left: 75%;
+      top: 50%;
+      left: 50%;
+      transform: translate(10vw, -50vh) scale(0.6);
       opacity: 0.4;
+      animation: fromCenterToRight 1s ease-in;
+
+      &.reverse {
+        animation: fromLeftToRight 1s ease-in forwards;
+      }
+    }
+  }
+  &__arrows {
+    height: 100%;
+    width: 100%;
+    position: relative;
+
+    & i {
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0.7;
+      cursor: pointer;
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    & .right {
+      right: 5%;
+    }
+
+    & .left {
+      left: 5%;
     }
   }
   &__button {
@@ -65,5 +104,71 @@
     margin: 2.5rem 0 5rem 0;
 
     @include btnBigBlack;
+  }
+}
+
+@keyframes fromLeftToCenter {
+  0% {
+    transform: translate(-35vw, -40vh) scale(0.7);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fromCenterToRight {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(10vw, -50vh) scale(0.6);
+    opacity: 0.4;
+  }
+}
+
+@keyframes fromRightToLeft {
+  0% {
+    transform: translate(-50%, -50vh) scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-35vw, -40vh) scale(0.7);
+    opacity: 0.7;
+  }
+}
+
+@keyframes fromCenterToLeft {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-35vw, -40vh) scale(0.7);
+    opacity: 0.7;
+  }
+}
+
+@keyframes fromLeftToRight {
+  0% {
+    transform: translate(-35vw, -40vh) scale(0.7);
+    opacity: 0.7;
+  }
+  0% {
+    transform: translate(-50%, -50vh) scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes fromRightToCenter {
+  0% {
+    transform: translate(10vw, -50vh) scale(0.6);
+    opacity: 0.4;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
   }
 }
