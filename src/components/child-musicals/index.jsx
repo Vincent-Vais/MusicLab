@@ -1,11 +1,117 @@
 import React from "react";
 
+import src from "../../assets/theater.mp4";
+import Video from "../video";
+
 import "./ChildMusicals.scss";
 
 const ChildMusicals = () => {
   return (
     <div className="child-musicals">
-      <h1 style={{ fontSize: "10rem" }}>CHIIIIILD</h1>
+      <div className="child-musicals__grid">
+        <div className="child-musicals__item">
+          <div className="child-musicals__item--video">
+            <Video src={src} />
+          </div>
+          <div className="child-musicals__item--name">
+            <h3>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus,
+              nesciunt at.
+            </h3>
+          </div>
+        </div>
+        <div className="child-musicals__item">
+          <div className="child-musicals__item--video">
+            <Video src={src} />
+          </div>
+          <div className="child-musicals__item--name">
+            <h3>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus,
+              nesciunt at.
+            </h3>
+          </div>
+        </div>
+        <div className="child-musicals__item">
+          <div className="child-musicals__item--video">
+            <Video src={src} />
+          </div>
+          <div className="child-musicals__item--name">
+            <h3>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus,
+              nesciunt at.
+            </h3>
+          </div>
+        </div>
+        <div className="child-musicals__item">
+          <div className="child-musicals__item--video">
+            <Video src={src} />
+          </div>
+          <div className="child-musicals__item--name">
+            <h3>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus,
+              nesciunt at.
+            </h3>
+          </div>
+        </div>
+        <div className="child-musicals__item">
+          <div className="child-musicals__item--video">
+            <Video src={src} />
+          </div>
+          <div className="child-musicals__item--name">
+            <h3>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus,
+              nesciunt at.
+            </h3>
+          </div>
+        </div>
+        <div className="child-musicals__item">
+          <div className="child-musicals__item--video">
+            <Video src={src} />
+          </div>
+          <div className="child-musicals__item--name">
+            <h3>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus,
+              nesciunt at.
+            </h3>
+          </div>
+        </div>
+        <div className="child-musicals__item">
+          <div className="child-musicals__item--video">
+            <Video src={src} />
+          </div>
+          <div className="child-musicals__item--name">
+            <h3>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus,
+              nesciunt at.
+            </h3>
+          </div>
+        </div>
+        <div className="child-musicals__item">
+          <div className="child-musicals__item--video">
+            <Video src={src} />
+          </div>
+          <div className="child-musicals__item--name">
+            <h3>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus,
+              nesciunt at.
+            </h3>
+          </div>
+        </div>
+        <div className="child-musicals__item">
+          <div className="child-musicals__item--video">
+            <Video src={src} />
+          </div>
+          <div className="child-musicals__item--name">
+            <h3>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus,
+              nesciunt at.
+            </h3>
+          </div>
+        </div>
+      </div>
+      <div className="child-musicals__cta">
+        <button className="child-musicals__button">Заказать музыку</button>
+      </div>
     </div>
   );
 };

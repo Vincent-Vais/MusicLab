@@ -42,3 +42,10 @@
 @mixin colThreeFour {
   flex: 1 1 75%;
 }
+
+@mixin colOneSix {
+  flex: 1 1 15%;
+}
+@mixin colFiveSix {
+  flex: 1 1 85%;
+}

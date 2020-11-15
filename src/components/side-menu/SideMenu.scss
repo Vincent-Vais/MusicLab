@@ -5,8 +5,7 @@
 .side-menu {
   height: 100vh;
 
-  flex: 1 1 15%;
-  // @include colOneFour;
+  @include colOneSix;
   @include padVertBgNone;
   @include flexColumn;
   @include flexStartCenter;

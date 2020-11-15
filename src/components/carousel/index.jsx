@@ -69,8 +69,14 @@ const Carousel = () => {
           <MusicCover img={DATA[2].img} position={POSITIONS[(num + 2) % 3]} />
         </div>
         <div className="carousel__arrows">
-          <i class="fas fa-arrow-circle-right fa-4x right" onClick={addNum}></i>
-          <i class="fas fa-arrow-circle-left fa-4x left" onClick={subNum}></i>
+          <i
+            className="fas fa-arrow-circle-right fa-4x right"
+            onClick={addNum}
+          ></i>
+          <i
+            className="fas fa-arrow-circle-left fa-4x left"
+            onClick={subNum}
+          ></i>
         </div>
       </div>
       <div className="carousel__cta">

@@ -119,3 +119,70 @@
     width: 0%;
   }
 }
+
+// Carousel
+@keyframes fromLeftToCenter {
+  0% {
+    transform: translate(-35vw, -40vh) scale(0.7);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fromCenterToRight {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(10vw, -50vh) scale(0.6);
+    opacity: 0.4;
+  }
+}
+
+@keyframes fromRightToLeft {
+  0% {
+    transform: translate(-50%, -50vh) scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-35vw, -40vh) scale(0.7);
+    opacity: 0.7;
+  }
+}
+
+@keyframes fromCenterToLeft {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-35vw, -40vh) scale(0.7);
+    opacity: 0.7;
+  }
+}
+
+@keyframes fromLeftToRight {
+  0% {
+    transform: translate(-35vw, -40vh) scale(0.7);
+    opacity: 0.7;
+  }
+  0% {
+    transform: translate(-50%, -50vh) scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes fromRightToCenter {
+  0% {
+    transform: translate(10vw, -50vh) scale(0.6);
+    opacity: 0.4;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}

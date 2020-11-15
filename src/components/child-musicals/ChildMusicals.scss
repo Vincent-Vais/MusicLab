@@ -1,4 +1,52 @@
+@import "../../scss/layout";
+@import "../../scss/vars";
+@import "../../scss/flex";
+@import "../../scss/components";
+
 .child-musicals {
-  flex: 1 1 75%;
-  background: #fff;
+  background: $bcg_white;
+
+  @include colFiveSix;
+  @include flexColumn;
+  @include flexCenterCenter;
+
+  &__grid {
+    margin: 2.5rem 0;
+
+    @include row80;
+    @include flexWrap;
+    @include flexCenterNone;
+  }
+
+  &__item {
+    flex: 0 1 30%;
+    background: $bcg_white;
+    height: 37.5vh;
+    box-shadow: $box_shadow_big;
+    border-radius: 5px;
+    margin: 5rem 2.5rem 0 0;
+
+    &--video {
+      height: 75%;
+      overflow: hidden;
+      border-top-right-radius: 5px;
+      border-top-left-radius: 5px;
+      & video {
+        transform: scale(1.2);
+      }
+    }
+
+    &--name {
+      height: 25%;
+      padding: 1rem;
+    }
+  }
+  &__button {
+    text-transform: uppercase;
+    font-size: 700;
+    font-size: 3rem;
+    margin: 2.5rem 0 5rem 0;
+
+    @include btnBigBlack;
+  }
 }
