@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import SideMenu from "../components/side-menu";
 import Carousel from "../components/carousel";
 import ChildMusicals from "../components/child-musicals";
+import ChildSongs from "../components/child-songs";
+import AdultSongs from "../components/adult-songs";
 
 const Music = () => {
   const [tab, setTab] = useState('"Чудо-карусель"');
@@ -10,7 +12,8 @@ const Music = () => {
   const names = [
     { name: '"Чудо-карусель"', component: Carousel },
     { name: "Детские мюзиклы", component: ChildMusicals },
-    // "Взрослые песни",
+    { name: "Детские песни", component: ChildSongs },
+    { name: "Взрослые песни", component: AdultSongs },
     // "Гимны",
     // '"Веселая перепутаница"',
   ];

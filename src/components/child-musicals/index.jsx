@@ -1,5 +1,7 @@
 import React from "react";
 
+import CtaButton from "../cta-button";
+
 import src from "../../assets/theater.mp4";
 import Video from "../video";
 
@@ -110,7 +112,7 @@ const ChildMusicals = () => {
         </div>
       </div>
       <div className="child-musicals__cta">
-        <button className="child-musicals__button">Заказать музыку</button>
+        <CtaButton />
       </div>
     </div>
   );

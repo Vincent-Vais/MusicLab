@@ -1,0 +1,24 @@
+@import "../../scss/layout";
+@import "../../scss/flex";
+@import "../../scss/vars";
+
+.child-songs {
+  background: $bcg_white;
+
+  @include colFiveSix;
+  @include flexColumn;
+  @include flexCenterCenter;
+
+  &__grid {
+    width: 80%;
+    margin: 7.5rem 0 2.5rem 0;
+    @include flexWrap;
+    @include flexCenterCenter;
+  }
+
+  &__item {
+    flex: 0 1 28%;
+    height: 55vh;
+    margin: 2.5rem 4rem 0 0;
+  }
+}

@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 
 import MusicCover from "../music-cover";
+import CtaButton from "../cta-button";
+
 import img1 from "../../assets/song1.jpeg";
 import img2 from "../../assets/song2.jpeg";
 import img3 from "../../assets/song3.jpeg";
@@ -80,7 +82,7 @@ const Carousel = () => {
         </div>
       </div>
       <div className="carousel__cta">
-        <button className="carousel__button">Заказать музыку</button>
+        <CtaButton />
       </div>
     </div>
   );
